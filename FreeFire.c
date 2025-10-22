@@ -14,10 +14,16 @@ typedef struct {
 Item mochila[MAX_ITENS];
 int totalItens = 0;
 
+// Protótipos de funções
+void inserirItem();
+void removerItem();
+void listarItens();
+void buscarItem();
+
 // Função para inserir um novo item na mochila
 void inserirItem() {
     if (totalItens >= MAX_ITENS) {
-        printf("⚠️ Mochila cheia! Não é possível adicionar mais itens.\n");
+        printf(" Mochila cheia! Não é possível adicionar mais itens.\n");
         return;
     }
 
@@ -32,7 +38,7 @@ void inserirItem() {
     mochila[totalItens] = novoItem;
     totalItens++;
 
-    printf("✅ Item adicionado com sucesso!\n");
+    printf(" Item adicionado com sucesso!\n");
     listarItens();
 }
 
@@ -56,7 +62,7 @@ void removerItem() {
     }
 
     if (!encontrado) {
-        printf("❌ Item não encontrado na mochila.\n");
+        printf(" Item não encontrado na mochila.\n");
     }
 
     listarItens();
@@ -95,7 +101,7 @@ void buscarItem() {
     }
 
     if (!encontrado) {
-        printf("❌ Item não encontrado.\n");
+        printf(" Item não encontrado.\n");
     }
 }
 
@@ -127,10 +133,10 @@ int main() {
                 buscarItem();
                 break;
             case 0:
-                printf("👋 Saindo do sistema. Boa sorte no jogo!\n");
+                printf(" Saindo do sistema. Boa sorte no jogo!\n");
                 break;
             default:
-                printf("⚠️ Opção inválida. Tente novamente.\n");
+                printf(" Opção inválida. Tente novamente.\n");
         }
     } while (opcao != 0);
 
