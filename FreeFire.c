@@ -56,7 +56,7 @@ void removerItem() {
                 mochila[j] = mochila[j + 1];
             }
             totalItens--;
-            printf("🗑️ Item removido com sucesso!\n");
+            printf(" Item removido com sucesso!\n");
             break;
         }
     }
@@ -92,7 +92,7 @@ void buscarItem() {
     int encontrado = 0;
     for (int i = 0; i < totalItens; i++) {
         if (strcmp(mochila[i].nome, nomeBusca) == 0) {
-            printf("🔍 Item encontrado:\n");
+            printf(" Item encontrado:\n");
             printf("Nome: %s | Tipo: %s | Quantidade: %d\n",
                    mochila[i].nome, mochila[i].tipo, mochila[i].quantidade);
             encontrado = 1;
