@@ -70,7 +70,7 @@ void removerItem() {
 
 // Função para listar todos os itens da mochila
 void listarItens() {
-    printf("\n📦 Itens na mochila:\n");
+    printf("\n Itens na mochila:\n");
     if (totalItens == 0) {
         printf("Mochila vazia.\n");
         return;
